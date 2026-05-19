@@ -2,15 +2,15 @@
    Variables & Base
    =========================== */
 :root {
-    --primary: #cc0000;
-    --primary-dark: #990000;
-    --primary-light: #2a0000;
-    --dark: #0a0a0a;
-    --dark-light: #111111;
-    --gray-100: #1a1a1a;
-    --gray-200: #222222;
-    --gray-500: #999999;
-    --gray-700: #cccccc;
+    --primary: #0d6efd;
+    --primary-dark: #0a58ca;
+    --primary-light: #e7f1ff;
+    --dark: #1a1a2e;
+    --dark-light: #16213e;
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-500: #6c757d;
+    --gray-700: #495057;
     --radius: 0.75rem;
     --radius-lg: 1rem;
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -20,15 +20,14 @@
 }
 
 body {
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     color: var(--gray-700);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
-    background-color: #0a0a0a;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #e0e0e0;
+    color: var(--dark);
     font-weight: 700;
     line-height: 1.3;
     letter-spacing: -0.02em;
@@ -89,7 +88,7 @@ section {
    Hero Sections
    =========================== */
 .hero-section {
-    background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 40%, var(--primary-dark) 100%);
+    background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 50%, var(--primary-dark) 100%);
     color: #fff;
     padding: 5rem 0;
     position: relative;
@@ -103,7 +102,7 @@ section {
     right: -20%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(204, 0, 0, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(13, 110, 253, 0.15) 0%, transparent 70%);
     border-radius: 50%;
 }
 
@@ -114,7 +113,7 @@ section {
     left: -10%;
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(204, 0, 0, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(13, 110, 253, 0.1) 0%, transparent 70%);
     border-radius: 50%;
 }
 
@@ -148,7 +147,7 @@ section {
    Stats Bar
    =========================== */
 .stats-bar {
-    background: #111;
+    background: #fff;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     margin-top: -3rem;
@@ -185,7 +184,6 @@ section {
    Cards
    =========================== */
 .card {
-    background: #111;
     border: 1px solid var(--gray-200);
     border-radius: var(--radius-lg);
     transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
@@ -215,7 +213,6 @@ section {
 }
 
 .card-title {
-    color: #e0e0e0; 
     font-weight: 700;
     margin-bottom: 0.75rem;
 }
@@ -259,7 +256,7 @@ section {
 .btn-primary:hover {
     background: var(--primary-dark);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(204, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
 }
 
 .btn-outline-primary {
@@ -271,7 +268,7 @@ section {
     background: var(--primary);
     border-color: var(--primary);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(204, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
 }
 
 .btn-outline-light {
@@ -279,7 +276,7 @@ section {
 }
 
 .btn-outline-light:hover {
-    background: rgba(214, 202, 202, 0.15);
+    background: rgba(255, 255, 255, 0.15);
     border-color: #fff;
 }
 
@@ -287,9 +284,7 @@ section {
    Publications List
    =========================== */
 .list-group-item {
-    background: #111;
-    color: #ccc;
-    border: 1px solid #333;
+    border: 1px solid var(--gray-200);
     border-radius: var(--radius) !important;
     margin-bottom: 0.75rem;
     transition: box-shadow var(--transition), border-color var(--transition);
@@ -302,7 +297,7 @@ section {
 
 .list-group-item h5 {
     font-size: 1.1rem;
-    color: #e0e0e0;
+    color: var(--dark);
 }
 
 .list-group-item p {
@@ -310,14 +305,10 @@ section {
     margin-bottom: 0.25rem;
 }
 
-.list-group-item .text-muted {
-    color: #ccc !important;
-}
-
 .year-divider {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #e0e0e0;
+    color: var(--dark);
     position: relative;
     padding-left: 1rem;
 }
@@ -344,7 +335,7 @@ section {
     width: 120px;
     height: 120px;
     object-fit: cover;
-    border: 4px solid #333;
+    border: 4px solid var(--gray-200);
     transition: border-color var(--transition), transform var(--transition);
 }
 
@@ -385,9 +376,7 @@ section {
    Contact Form
    =========================== */
 .form-control {
-    background: #111;
-    color: #ccc;
-    border: 2px solid #333;
+    border: 2px solid var(--gray-200);
     border-radius: var(--radius);
     padding: 0.75rem 1rem;
     font-size: 0.95rem;
@@ -396,12 +385,12 @@ section {
 
 .form-control:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.3);
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
 }
 
 .form-label {
     font-weight: 600;
-    color: #e0e0e0;
+    color: var(--dark);
     margin-bottom: 0.5rem;
 }
 
@@ -429,7 +418,7 @@ section {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #1a1a1a;
+    background: var(--gray-100);
     color: var(--primary);
     transition: all var(--transition);
 }
@@ -438,7 +427,7 @@ section {
     background: var(--primary);
     color: #fff;
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(204, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
 }
 
 /* ===========================
@@ -451,8 +440,8 @@ section {
 }
 
 .alert-info {
-    background: #1a0000;
-    color: #ff4444;
+    background: var(--primary-light);
+    color: var(--primary-dark);
 }
 
 /* ===========================
@@ -513,24 +502,15 @@ footer hr {
 .animate-on-scroll:nth-child(5) { transition-delay: 0.25s; }
 .animate-on-scroll:nth-child(6) { transition-delay: 0.3s; }
 
-/* Bootstrap overrides */
-.bg-dark {
-    background-color: #050505 !important;
-}
-
-footer {
-    background-color: #050505 !important;
-}
-
 /* ===========================
    Utility
    =========================== */
 .bg-light-custom {
-    background: #111 !important;
+    background: var(--gray-100) !important;
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, #6610f2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -607,15 +587,4 @@ footer {
     .section-header {
         margin-bottom: 2rem;
     }
-}
-
-/* ===========================
-   Admin Custom Styles
-   =========================== */
-body.admin-panel .nav-sidebar {
-    background: var(--dark);
-}
-
-body.admin-panel #header {
-    background: var(--dark);
 }

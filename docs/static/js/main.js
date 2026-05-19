@@ -30,28 +30,4 @@ document.addEventListener('DOMContentLoaded', function () {
         divider.classList.add('animate-on-scroll');
         observer.observe(divider);
     });
-
-    var themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function () {
-            var current = localStorage.getItem('theme') || 'v1';
-            var next = current === 'v2' ? 'v1' : 'v2';
-            localStorage.setItem('theme', next);
-            var link = document.getElementById('theme-style');
-            if (link) {
-                var isV2 = next === 'v2';
-                link.href = isV2
-                    ? 'static/css/style-v2.css'
-                    : 'static/css/style.css';
-            }
-        });
-    }
-
-    var savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'v2') {
-        var link = document.getElementById('theme-style');
-        if (link) {
-            link.href = 'static/css/style-v2.css';
-        }
-    }
 });
