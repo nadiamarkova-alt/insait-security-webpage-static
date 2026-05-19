@@ -310,6 +310,10 @@ section {
     margin-bottom: 0.25rem;
 }
 
+.list-group-item .text-muted {
+    color: #ccc !important;
+}
+
 .year-divider {
     font-size: 1.5rem;
     font-weight: 800;
