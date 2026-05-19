@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}Home - INSAIT Security Research Group{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="container position-relative" style="z-index: 2;">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-5 fw-bold text-nowrap">INSAIT Information Security Group</h1>
+                <p class="lead">Pioneering research in cybersecurity, cryptography, and secure systems at the Institute for Computer Science, Artificial Intelligence and Technology.</p>
+                <a href="{% url 'research' %}" class="btn btn-outline-light btn-lg">Our Research</a>
+                <a href="{% url 'members' %}" class="btn btn-outline-light btn-lg">Meet the Team</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container stats-bar">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="stat-item animate-on-scroll">
+                <i class="bi bi-people display-4"></i>
+                <h2>{{ members_count }}</h2>
+                <p>Team Members</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stat-item animate-on-scroll">
+                <i class="bi bi-journal-text display-4"></i>
+                <h2>{{ publications_count }}</h2>
+                <p>Publications</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="stat-item animate-on-scroll">
+                <i class="bi bi-lightbulb display-4"></i>
+                <h2>{{ topics.count }}</h2>
+                <p>Research Areas</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% if topics %}
+<section class="container my-5">
+    <div class="section-header">
+        <h2 class="mb-4">Our Mission</h2>
+        <div class="divider"></div>
+    </div>
+    <div class="mission-text">
+        <p>Our economic, political, and social life today is largely based on modern communication and IT infrastructures. The acceptance and continued expansion of these infrastructures depend on trust: all participants must have confidence in their proper functioning and, in particular, their security.</p>
+        <p><b>Our mission is:</b></p>
+        <ul>
+            <li>To contribute to the foundations for building secure systems, that is methods, techniques, and tools for improving the reliability and security of complex systems.</li>
+            <li>To advance methods and tools for validating system security, i.e., rigorous approaches to modeling, testing, verifying, and formally certifying the security of IT systems.</li>
+            <li>To apply our results on practical problems together with partners from industry, government agencies, and the public at large.</li>
+            <li>To carry out education in Information Security and related areas.</li>
+        </ul>
+    </div>
+</section>
+
+{% endif %}
+{% endblock %}

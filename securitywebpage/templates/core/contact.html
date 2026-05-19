@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact - INSAIT Security Research Group{% endblock %}
+
+{% block content %}
+<section class="hero-section py-5">
+    <div class="container position-relative" style="z-index: 2;">
+        <div class="section-header text-white">
+            <h1 class="mb-3">Contact Us</h1>
+            <p class="lead mb-0 text-white-50">Get in touch with our research group</p>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5">
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body p-4">
+                    <h4 class="card-title mb-1">If you want to join the team - we'd love to hear from you!<br><br></h4>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="What is this about?">
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-send me-1"></i>Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body p-4">
+                    <h4 class="card-title mb-1">Location</h4>
+                    <div class="mb-4">
+                        <div class="contact-info-item">
+                            <i class="bi bi-geo-alt"></i>
+                            <div>
+                                <strong>Synergy Tower, Sofia Tech Park</strong>
+                                <p class="text-muted mb-0">Blvd. Tsarigradsko shose 111R, 1784 Sofia, Bulgaria</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 class="mb-3">Follow Us</h6>
+                    <div class="social-links d-flex gap-3">
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
